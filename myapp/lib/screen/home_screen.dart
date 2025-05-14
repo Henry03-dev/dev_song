@@ -25,10 +25,7 @@ class _Title extends StatelessWidget {
       flex: 8,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          _TitleIconSets(),
-          _InforIconSets()
-        ],
+        children: [_TitleIconSets(), _InforIconSets()],
       ),
     );
   }
@@ -53,18 +50,21 @@ class _Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Expanded(
+    return Expanded(
       flex: 10,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           SizedBox(
-          width: 5.0,
+            width: 5.0,
           ),
-          Icon(
-            Icons.home,
-            color: Colors.grey,
-            size: 30.0,
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.home,
+              color: Colors.grey,
+              size: 30.0,
+            ),
           ),
           Icon(
             Icons.search,
@@ -82,7 +82,7 @@ class _Footer extends StatelessWidget {
             size: 30.0,
           ),
           SizedBox(
-          width: 5.0,
+            width: 5.0,
           ),
         ],
       ),
@@ -111,12 +111,12 @@ class _TitleIconSets extends StatelessWidget {
           ),
         ),
         Text(
-            'Dev_song',
-            style: TextStyle(
-              fontSize: 18.0,
-              fontWeight: FontWeight.w300,
-            ),
+          'Dev_song',
+          style: TextStyle(
+            fontSize: 18.0,
+            fontWeight: FontWeight.w300,
           ),
+        ),
       ],
     );
   }
@@ -130,18 +130,18 @@ class _InforIconSets extends StatelessWidget {
     return const Row(
       children: [
         Icon(
-            Icons.person,
-            color: Colors.grey,
-            size: 30.0,
-          ),
+          Icons.person,
+          color: Colors.grey,
+          size: 30.0,
+        ),
         SizedBox(
           width: 20.0,
         ),
         Icon(
-            Icons.menu,
-            color: Colors.grey,
-            size: 30.0,
-          ),
+          Icons.menu,
+          color: Colors.grey,
+          size: 30.0,
+        ),
         SizedBox(
           width: 15.0,
         ),
